@@ -1,0 +1,83 @@
+
+## John the ripper + AI
+
+- introduction
+	- what is johntheripper
+	- uses
+	
+	
+	- syntax
+	
+### John basic syntax
+
+ -> john [options] [file path]
+
+ -> john --wordlist=/usr/share/wordlists/rockyou.txt hash_to_crack.txt
+
+### To set John to a specific format use --format:
+
+ -> john --format=[format] --wordlist=[path to wordlist] [path to file]
+ -> john --format=raw-md5 --wordlist=/usr/share/wordlists/rockyou.txt hash_to_crack.txt
+ -> john --show unshadowed.txt
+
+
+
+
+
+
+- what john can do
+
+	- additional files
+
+- practical
+
+	- hashanalyzer website
+	- john pentestmonkey
+
+
+1. hash  -> md5,sha1,sha256,whirlpool,
+2. ntlm -> nt
+3. single mode  add username Joker 2 file -> john --single --format=raw-sha256 hashes.txt
+4. shadow -> john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt unshadowed.txt
+5. zip
+6. rar
+7. ssh
+8. pdf   
+9. docx
+10. veracrypt container
+11. custom rules
+
+- conclusion
+
+
+
+### Resources
+
+Pentestmonkey Cheatsheet: https://pentestmonkey.net/cheat-sheet/john-the-ripper-hash-formats
+
+medium: https://medium.com/@priscillaogundipe28
+
+Kali Docs: https://www.kali.org/tools/john/
+
+
+
+
+
+## Add password to pdf
+
+-> sudo apt install qpdf  
+ 
+-> qpdf --encrypt <user_password> <owner_password> 256 -- <input_file>.pdf <output_protected>.pdf
+
+<user_password>: The password required for someone to view the file.
+<owner_password>: The password required to change the PDF's security settings later.
+256: Specifies the encryption strength (AES-256). 
+
+
+
+
+
+
+
+
+
